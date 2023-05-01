@@ -1,0 +1,41 @@
+if wanted to view structure of packages  run 
+command =  npx nx graph 
+these command will give us the graph view of the project 
+
+step 1 : 
+install lerna  
+
+step 2 : initialize the lerna 
+npx lerna init
+it will create the lerna app
+
+step 3 : 
+cd packages 
+npx create-react-app common
+create multiple apps inside the  packages folder 
+
+step 4 :
+In the packages we need to choose which package should be our  root which is dependencie for  which package
+npx lerna add common --scope=myweb
+for above command we adding common as  dependencie for myweb 
+
+step 5 :
+we need to use the  common applications commponents into myweb we need use the @craco/craco 
+craco  = create-react-app-configuration-override 
+these package is used to override the default  configuration made the  create-react-app webpack
+cd  myweb
+npm i  -D @craco/craco 
+
+step 6 : setup craco.config.js
+cd myweb
+touch craco.config.js
+add cofuguration which is added in the current repo 
+
+
+step 7 : update start command in package.json of myweb 
+cd  myweb 
+react-scripts start = craco start 
+
+step 8 :
+add start command in root folder  package.json  
+start : "lerna exec --scope myweb npm start"
