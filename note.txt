@@ -2,6 +2,7 @@ if wanted to view structure of packages  run
 command =  npx nx graph 
 these command will give us the graph view of the project 
 
+
 step 1 : 
 install lerna  
 
@@ -39,3 +40,5 @@ react-scripts start = craco start
 step 8 :
 add start command in root folder  package.json  
 start : "lerna exec --scope myweb npm start"
+
+new note added here
