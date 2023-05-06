@@ -40,5 +40,3 @@ react-scripts start = craco start
 step 8 :
 add start command in root folder  package.json  
 start : "lerna exec --scope myweb npm start"
-
-new note added here
